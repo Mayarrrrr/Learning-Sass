@@ -1,0 +1,36 @@
+%btn {                              //shared style
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+  
+    &:hover {
+      transform: scale(.98);
+    }
+  }
+  
+  .btn-primary {
+    @extend %btn;
+    @include set-background(lighten($primary-color, 10%));       //al button file 3ndo acess 3al conig 3adii l2n fe al a5r kolhom by-runo fe one css file 
+  }
+  
+  .btn-secondary {
+    @extend %btn;
+    @include set-background($secondary-color);          //3shan ykon al bgd bta3 al button depend 3al return 
+  }
+
+
+
+  %message-shared {
+    border: 1px solid #ccc;
+  }
+
+  .message {
+    @extend %message-shared;
+  }
+
+  .error {
+    @extend %message-shared;
+    border-color: red;    
+  }
+

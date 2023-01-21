@@ -1,0 +1,28 @@
+$light-color: #f4f4f4;      //variable I'd use over and over
+$font-stack: Arial, Helvetica, sans-serif;      //any css file you can set it in a variable
+$primary-color: #0e6cff;
+// $primary-color: #e0ffff;       // lon fate7 b-test beh al change of colors
+$secondary-color: #ff8700;
+
+// Set text color based on bg
+
+
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {                                     //check 3al bgd color lw fat7 gdn y8m2 al text w al 3aks lw 8am2 yft7o
+      @return #333;
+    } @else {
+      @return #fff;
+    }
+  }
+
+
+// Set background & text color
+@mixin set-background($color) {             //al mixin zi al fun bs mh bt-return 7aga mogrd bt-minimize al lines al bktbha kol shwya
+    background-color: $color;
+    color: set-text-color($color)
+  }
+
+
+
+
+
